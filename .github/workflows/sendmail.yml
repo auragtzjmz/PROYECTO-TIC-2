@@ -17,7 +17,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          from: ${{ secrets.EMAIL_USERNAME }}
+          from: bernardoorozcoquirarte@gmail.com
           subject: "Cambios subidos a rama ${{ github.ref_name }}"
           to: bernardoorozcoquirarte@gmail.com
           body: "Se han realizado cambios en la rama main del repositorio."
