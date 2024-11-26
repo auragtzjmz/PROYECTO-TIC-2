@@ -15,7 +15,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: bernie
+          username: bernax123321@gmail.com
           password: lhoayihxsnnopxeu
           from: bernax123321@gmail.com
           subject: "Cambios subidos a rama ${{ github.ref_name }}"
