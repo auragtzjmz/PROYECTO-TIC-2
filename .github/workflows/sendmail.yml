@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+      - feature_a
+      - feature_b
 
 jobs:
   send_email:
@@ -16,6 +18,12 @@ jobs:
           username: bernie
           password: lhoayihxsnnopxeu
           from: bernax123321@gmail.com
-          subject: "Cambios subidos a rama main"
+          subject: "Cambios subidos a rama ${{ github.ref_name }}"
           to: bernardoorozcoquirarte@gmail.com
-          body: "Se han realizado cambios en la rama main del repositorio."
+          body: |
+            Hola,
+
+            Se han realizado cambios en la rama ${{ github.ref_name }} del repositorio.
+
+            Saludos,
+            Tu repositorio automatizado.
