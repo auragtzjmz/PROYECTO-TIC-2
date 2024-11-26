@@ -1,1 +1,22 @@
+name: Enviar correo al subir cambios
+on:
+  push:
+    branches:
+      - main
+      - feature_a
+      - feature_b
 
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configuración de correos
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Cambios subidos a rama main"
+          to: bernardoorozcoquirarte@gmail.com
+          body: "Se han realizado cambios en la rama main del repositorio."
