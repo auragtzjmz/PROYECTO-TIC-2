@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-      - feature_a
-      - feature_b
 
 jobs:
   send_email:
@@ -16,8 +14,8 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 587
           username: bernie
-          password: lhoa yihx snno pxeu
+          password: lhoayihxsnnopxeu
           from: bernax123321@gmail.com
-          subject: "Cambios subidos a rama ${{ github.ref_name }}"
+          subject: "Cambios subidos a rama main"
           to: bernardoorozcoquirarte@gmail.com
           body: "Se han realizado cambios en la rama main del repositorio."
