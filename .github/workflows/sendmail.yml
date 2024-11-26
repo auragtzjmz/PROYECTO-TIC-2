@@ -19,7 +19,7 @@ jobs:
           password: lhoayihxsnnopxeu
           from: bernax123321@gmail.com
           subject: "Cambios subidos a rama ${{ github.ref_name }}"
-          to: bernardoorozcoquirarte@gmail.com
+          to: bernardoorozcoquirarte@gmail.com, aurag0480@gmail.com
           body: |
             Hola,
 
